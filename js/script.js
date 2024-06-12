@@ -42,12 +42,10 @@ const listItem = document.getElementsByClassName("item-list");
 console.log(listItem);
 
 // crea un evento al click
-let clickCount = 0;
 for(let i = 0; i < listItem.length; i++){
     listItem[i].addEventListener("click", 
         function(){
-            clickCount++;
-            if (clickCount % 2 === 0){
+            if (listItem[i].classList.contains("active")){
                 listItem[i].classList.remove("active");
             } else {
                 listItem[i].classList.add("active");
